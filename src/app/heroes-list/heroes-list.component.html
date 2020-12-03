@@ -1,0 +1,12 @@
+<div class="search-bar">
+  <input class="search-input" [(ngModel)]="search" placeholder="Search hero">
+</div>
+
+<div class="heroes-wrapper">
+  <div class="hero-block" *ngFor="let hero of heroes | searchPipe:search" [ngStyle]="{'background-image': 'url('+ hero.images.sm +')'}">
+    <div class="hero-details">
+      <h4>{{hero.name}}</h4>
+      <span>{{hero.biography.publisher}}</span>
+    </div>
+  </div>
+</div>
