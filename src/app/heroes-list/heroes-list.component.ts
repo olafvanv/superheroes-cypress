@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HeroesService } from '../services/heroes.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class HeroesListComponent implements OnInit {
   search: string;
 
   constructor(
-    private _heroes: HeroesService
+    private _heroes: HeroesService,
+    private router: Router
   ) {
     this._heroes.getAllHeroes().subscribe((d: any[]) => {
       this.heroes = d.slice(0, 250);
@@ -22,4 +24,7 @@ export class HeroesListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openHero(id:string) {
+    this.router.navigate(['/hero-details', id]);
+  }
 }

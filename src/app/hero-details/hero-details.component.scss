@@ -1,0 +1,30 @@
+.loader {
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.hero-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+
+  .hero-details {
+    display: flex;
+    padding: 26px;
+    box-sizing: border-box;
+
+    .image {
+      height:300px;
+      width: auto;
+      border-radius: 4px;
+      margin-right: 20px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
