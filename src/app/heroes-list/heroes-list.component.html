@@ -3,7 +3,7 @@
 </div>
 
 <div class="heroes-wrapper">
-  <div class="hero-block" *ngFor="let hero of heroes | searchPipe:search" [ngStyle]="{'background-image': 'url('+ hero.images.sm +')'}">
+  <div class="hero-block" *ngFor="let hero of heroes | searchPipe:search" [ngStyle]="{'background-image': 'url('+ hero.images.sm +')'}" (click)="openHero(hero.id)">
     <div class="hero-details">
       <h4>{{hero.name}}</h4>
       <span>{{hero.biography.publisher}}</span>
